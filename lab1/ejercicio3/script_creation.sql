@@ -22,23 +22,23 @@ CREATE TABLE blood_type (
 -- Tabla: medical_appointment_status
 CREATE TABLE medical_appointment_status (
                                             id INT IDENTITY(1,1) PRIMARY KEY,
-                                            status VARCHAR(10) NOT NULL
+                                            status VARCHAR(250) NOT NULL
 );
 
 -- Tabla: address
 CREATE TABLE address (
                          id INT IDENTITY(1,1) PRIMARY KEY,
                          street VARCHAR(60) NOT NULL,
-                         city VARCHAR(30) NOT NULL,
-                         country VARCHAR(30) NOT NULL,
-                         postal_code VARCHAR(8) NOT NULL
+                         city VARCHAR(50) NOT NULL,
+                         country VARCHAR(50) NOT NULL,
+                         postal_code VARCHAR(20) NOT NULL
 );
 
 -- Tabla: phone
 CREATE TABLE phone (
                        id INT IDENTITY(1,1) PRIMARY KEY,
                        code_area VARCHAR(4) NOT NULL,
-                       n_phone VARCHAR(10) NOT NULL
+                       n_phone VARCHAR(20) NOT NULL
 );
 
 -- Tabla: doctor (SIN business_hours_id para evitar referencia circular)
